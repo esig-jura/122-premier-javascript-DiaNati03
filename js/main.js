@@ -55,7 +55,13 @@ function ajouter(){
 
 //btAjouter.addEventListener('click', ajouter);
 
-btAjouter.addEventListener('click', function ajouter(){
-
+//Meme chose avec un arrow function anonyme + détails
+btAjouter.addEventListener('click', () =>{
+    //si le texte saisi est plus petit que 1 caractère
+    if(txtArticle.value.length < 1){
+        returne; //sort de la fonction
+    }
     ulListe.innerHTML += `<li> ${txtArticle.value} </li>`;
+    txtArticle.value = '';
+    txtArticle.focus();
 });
